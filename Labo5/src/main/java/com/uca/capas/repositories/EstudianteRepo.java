@@ -25,6 +25,6 @@ public interface EstudianteRepo extends JpaRepository<Estudiante, Integer> {
 
 	@Transactional
 	@Modifying
-	@Query("UPDATE Estudiante e SET e.nombre = ?1, e.apellido = ?2, e.edad = ?3, e.estado =?4 WHERE id_estudiante = ?5")
+	@Query("UPDATE Estudiante e SET e.nombre = ?1, e.apellido = ?2, e.edad = ?3, e.estado =?4 WHERE codigoEstudiante = ?5")
 	public void ActualizarEst(String nombre, String apellido, Integer edad, Boolean estado, Integer codigo) throws DataAccessException;
 }
