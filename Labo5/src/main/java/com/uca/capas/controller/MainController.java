@@ -173,7 +173,6 @@ public class MainController {
 				e.printStackTrace();
 			}
 			
-			estudiantes = estudianteService.findAll();
 			mav.addObject("estudiantes", estudiantes);
 			mav.setViewName("listaEstudiantes");
 			

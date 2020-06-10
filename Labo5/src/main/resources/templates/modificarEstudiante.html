@@ -9,6 +9,9 @@
 
 		<h1>Ingresar Estudiante</h1>
 
+			<label>Codigo : </label>
+			<label> <span th:text="${estudiante.codigoEstudiante}" ></span> </label> <br><br>
+
 			<label>Nombre :</label><br>
 			<input type="text" th:field="${estudiante.nombre}"><br>
 			<span th:errors="${estudiante.nombre}" style="color:  #E81505;"></span><br>
@@ -28,10 +31,8 @@
 			<input type="radio" th:field="${estudiante.estado}" th:value = "${false}"><br>
 
 		<input type="submit" value="Guardar">
-	</form><br><br>
-	
+	</form><br>
 
-	<br>
 	<button><a href="/estudiante" style="text-decoration:none; color: #000;">Inicio</a></button>
 
 
