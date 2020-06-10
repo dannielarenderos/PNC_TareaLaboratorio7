@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmins:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Mostrar datos de estudiante</title>
+</head>
+<body>
+
+	<label> Estudiante con codigo </label>
+	<label th:text="${estudiante.codigoEstudiante}"></label>
+	<table>
+
+		<thead>
+			<th>Nombre</th>
+			<th>Apellido</th>
+			<th>Carne</th>
+			<th>Carrera</th>
+		</thead>
+
+		<tr>
+				<th th:text="${estudiante.nombre}"/>
+				<th th:text="${estudiante.apellido}"/>
+				<th th:text="${estudiante.edad}"/>
+				<th th:text="${estudiante.estadoDelegate}"/>
+		</tr>
+	</table>
+
+	<form th:action="@{/estudiante}">
+		<input type="submit" value ="Regresar">
+	</form> <br>
+	
+
+</body>
+</html>

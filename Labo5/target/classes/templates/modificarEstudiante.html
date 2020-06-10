@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlms:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Agregar nuevo estudiante</title>
+</head>
+<body>
+<form th:action="@{/modificarEstudiante}" th:object="${estudiante}" method="post">
+
+		<h1>Ingresar Estudiante</h1>
+
+			<label>Nombre :</label><br>
+			<input type="text" th:field="${estudiante.nombre}"><br>
+			<span th:errors="${estudiante.nombre}" style="color:  #E81505;"></span><br>
+			
+			<label>Apellido:</label><br>
+			<input type="text" th:field="${estudiante.apellido}"><br>
+			<span th:errors="${estudiante.apellido}" style="color:  #E81505;"></span><br>
+			
+			<label>Edad (No menor a 18):</label><br>
+			<input type="number" th:field="${estudiante.edad}"><br>
+			<span th:errors="${estudiante.edad}" style="color:  #E81505;"></span><br>
+			
+			<label>Activo:</label><br>
+			<input type="radio" th:field="${estudiante.estado}" th:value = "${true}"><br>
+
+			<label>Inactivo:</label><br>
+			<input type="radio" th:field="${estudiante.estado}" th:value = "${false}"><br>
+
+		<input type="submit" value="Guardar">
+	</form><br><br>
+	
+
+	<br>
+	<button><a href="/estudiante" style="text-decoration:none; color: #000;">Inicio</a></button>
+
+
+</body>
+</html>
