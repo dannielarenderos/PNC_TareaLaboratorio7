@@ -11,6 +11,7 @@
 
 			<label>Codigo : </label>
 			<label> <span th:text="${estudiante.codigoEstudiante}" ></span> </label> <br><br>
+			<input type="hidden" th:field="${estudiante.codigoEstudiante}" name="id"></input>
 
 			<label>Nombre :</label><br>
 			<input type="text" th:field="${estudiante.nombre}"><br>
