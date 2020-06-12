@@ -178,9 +178,10 @@ public class MainController {
 			
 			
 		}else {
-			estudiante = new Estudiante();
-			mav.addObject("estudiante", estudiante);
-			mav.setViewName("estudiante");
+			estudiantes = estudianteService.findAll();
+
+			mav.addObject("estudiantes", estudiantes);
+			mav.setViewName("main");
 		}
 		
 		
